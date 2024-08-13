@@ -30,7 +30,18 @@ Para el circuito electrónico dado, donde:
 - $\( V_z = 10 \, \text{V} \)$
 - $\( P_{Zmax} = 0.5 \, \text{W} \)$
 
-Realizaremos los siguientes cálculos para determinar el valor de $\( V_i \)$ y la corriente $\( I_{Zmn} \)$:
+> [!TIP]
+> En el circuito, tenemos un diodo Zener conectado en paralelo con la carga $R_L$. Para asegurar que el diodo Zener esté operando en su zona de regulación, el voltaje a través del Zener $V_z$ debe alcanzarse sin sobrepasar su potencia máxima $P_{Zmax}$. El voltaje de entrada debe considerar las siguientes relaciones:
+
+1. Condición para el voltaje de entrada $V_i$: Para que el diodo Zener esté en su estado operativo de regulación de voltaje, $V_i$ debe ser suficiente para compensar la caída de voltaje a través de $R$  y mantener el voltaje en $V_z$.
+2. Entonces, la ecuación inicial para determinar el voltaje mínimo de entrada $V_i$ es:
+
+```math
+V_i \geq V_z + I_R \cdot R
+```
+
+> [!IMPORTANT]
+> Realizaremos los siguientes cálculos para determinar el valor de $\( V_i \)$ y la corriente $\( I_{Zmn} \)$:
 
 ### Paso 1: Análisis del Circuito
 
@@ -46,7 +57,7 @@ El circuito incluye una fuente de voltaje $\( V_i \)$, una resistencia en serie 
 I_R = \frac{V_i - V_z}{R}
 ```
 
-3. **Corriente a través de \( R_L \)**: La corriente a través de la carga $\( R_L \)$ es:
+3. **Corriente a través de $\( R_L \)$**: La corriente a través de la carga $\( R_L \)$ es:
   ```math
    I_L = \frac{V_z}{R_L}
    ```
@@ -85,7 +96,10 @@ I_R = \frac{V_i - V_z}{R}
    I_{Zmn} = \frac{P_{Zmax}}{V_z}
   ```
 
-### Paso 4: Ejemplo con Valores Dados
+### Paso 4: 
+
+> [!TIP]
+> Ejemplo con Valores Dados
 
 1. **Valores Específicos**:
    - $\( R = 1 \, \text{k}\Omega \)$
@@ -94,17 +108,18 @@ I_R = \frac{V_i - V_z}{R}
    - $\( P_{Zmax} = 0.5 \, \text{W} \)$
 
 2. **Cálculo de $\( V_i \)$**:
-- $$V_i \geq 10 \ \text{V} + 1000 \ \Omega \left( \frac{0.5 \, \text{W}}{10 \ \text{V}} + \frac{10 \ \text{V}}{10000 \ \Omega} \right)$$
+- $$V_i \geq 10 \ \text{V} + 1000 \ \Omega \left( \frac{0.5 \ \text{W}}{10 \ \text{V}} + \frac{10 \ \text{V}}{10000 \ \Omega} \right)$$
    
-- $$V_i \geq 10 \, \text{V} + 1000 \, \Omega \left( 0.05 \, \text{A} + 0.001 \, \text{A} \right)$$
+- $$V_i \geq 10 \ \text{V} + 1000 \ \Omega \left( 0.05 \ \text{A} + 0.001 \ \text{A} \right)$$
   
-- $$V_i \geq 10 \, \text{V} + 51 \, \text{V}$$
+- $$V_i \geq 10 \ \text{V} + 51 \ \text{V}$$
    
-- $$V_i \geq 15.1 \, \text{V}$$
+- $$V_i \geq 61 \ \text{V}$$
    
 
 3. **Cálculo de $\( I_{Zmn} \)$**:
-  - $$I_{Zmn} = \frac{0.5 \, \text{W}}{10 \, \text{V}} = 0.05 \, \text{A}$$
+  - $$I_{Zmn} = \frac{0.5 \ \text{W}}{10 \ \text{V}} = 0.05 \, \text{A}$$ :+1: 
 
-Este análisis provee los pasos para determinar experimentalmente la curva característica del diodo Zener y establecer los valores de operación segura dentro del circuito.
-```
+> [!NOTE]
+> Este análisis provee los pasos para determinar experimentalmente la curva característica del diodo Zener y establecer los valores de operación segura dentro del circuito.
+``` 
