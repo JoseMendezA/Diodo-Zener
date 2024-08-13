@@ -69,19 +69,19 @@ I_R = \frac{V_i - V_z}{R}
 
 5. **Condición de Potencia Máxima**: La potencia disipada en el diodo Zener no debe exceder $\( P_{Zmax} \)$:
 
-      $$P_Z = V_Z \cdot I_Z \leq P_{Zmax}$$
+      $$P_Z = 4 \cdot V_Z \cdot I_Z \leq P_{Zmax}$$
 
    
    Despejando $\( I_Z \)$:
-   $$I_Z \leq \frac{P_{Zmax}}{V_z}$$
+   $$I_Z \leq \frac{P_{Zmax}}{4 \cdot V_z}$$
 
 7. **Cálculo del $\( V_i \)$ Mínimo**: Sustituyendo $\( I_Z \)$ en términos de $\( I_R \)$ y $\( I_L \)$:
   
-   $$\frac{V_i - V_z}{R} - \frac{V_z}{R_L} \leq \frac{P_{Zmax}}{V_z}$$
+   $$\frac{V_i - V_z}{R} - \frac{V_z}{R_L} \leq \frac{P_{Zmax}}{4 \cdot V_z}$$
   
    Simplificando para $\( V_i \)$:
   
-   $$V_i \geq V_z + R \left( \frac{P_{Zmax}}{V_z} + \frac{V_z}{R_L} \right)$$
+   $$V_i \geq V_z + R \left( \frac{P_{Zmax}}{4 \cdot V_z} + \frac{V_z}{R_L} \right)$$
    
 
 ### Paso 3: Cálculo de la Corriente $\( I_{Zmn} \)$
@@ -93,7 +93,7 @@ I_R = \frac{V_i - V_z}{R}
 
 2. Dado que la corriente a través del Zener debe ser suficiente para que el diodo empiece a regular el voltaje, podemos tomar el caso límite cuando $\( I_Z \)$ es igual a:
   ```math
-   I_{Zmn} = \frac{P_{Zmax}}{V_z}
+   I_{Zmn} = \frac{P_{Zmax}}{4 \cdot V_z}
   ```
 
 ### Paso 4: 
@@ -108,17 +108,18 @@ I_R = \frac{V_i - V_z}{R}
    - $\( P_{Zmax} = 0.5 \, \text{W} \)$
 
 2. **Cálculo de $\( V_i \)$**:
-- $$V_i \geq 10 \ \text{V} + 1000 \ \Omega \left( \frac{0.5 \ \text{W}}{10 \ \text{V}} + \frac{10 \ \text{V}}{10000 \ \Omega} \right)$$
+- $$V_i \geq 10 \ \text{V} + 1000 \ \Omega \left( \frac{0.5 \ \text{W}}{4 \cdot 10 \ \text{V}} + \frac{10 \ \text{V}}{10000 \ \Omega} \right)$$
    
-- $$V_i \geq 10 \ \text{V} + 1000 \ \Omega \left( 0.05 \ \text{A} + 0.001 \ \text{A} \right)$$
+- $$V_i \geq 10 \ \text{V} + 1000 \ \Omega \left( 0.0125 \ \text{A} + 0.001 \ \text{A} \right)$$
   
-- $$V_i \geq 10 \ \text{V} + 51 \ \text{V}$$
+- $$V_i \geq 10 \ \text{V} + 13.5 \ \text{V}$$
    
-- $$V_i \geq 61 \ \text{V}$$
+- $$V_i \geq 23.5 \ \text{V}$$
    
 
 3. **Cálculo de $\( I_{Zmn} \)$**:
-  - $$I_{Zmn} = \frac{0.5 \ \text{W}}{10 \ \text{V}} = 0.05 \, \text{A}$$ :+1: 
+  - $$I_{Zmn} = \frac{0.5 \ \text{W}}{4 \cdot 10 \ \text{V}} = 0.0125 \ \text{A}$$ :+1:
+  - $$I_{Zmn} = 12,5 \ \text{mA}$$ :+1:
 
 > [!NOTE]
 > Este análisis provee los pasos para determinar experimentalmente la curva característica del diodo Zener y establecer los valores de operación segura dentro del circuito.
