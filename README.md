@@ -119,7 +119,8 @@ I_R = \frac{V_i - V_z}{R}
 
 3. **Cálculo de $\( I_{Zmn} \)$**:
   - $$I_{Zmn} = \frac{0.5 \ \text{W}}{4 \cdot 10 \ \text{V}} = 0.0125 \ \text{A}$$ :+1:
-  - $$I_{Zmn} = 12,5 \ \text{mA}$$ :+1:
+> [!WARNING]
+> $$I_{Zmn} = 12,5 \ \text{mA}$$ :+1:
 
 > [!NOTE]
 > Este análisis provee los pasos para determinar experimentalmente la curva característica del diodo Zener y establecer los valores de operación segura dentro del circuito.
