@@ -12,6 +12,9 @@ Obtención de la curva característica del diodo zener
 
 ### a. Análisis del Circuito Electrónico
 
+![image](https://github.com/user-attachments/assets/db5f87dc-2097-4593-b9c3-6340ca2a6e33)
+
+
 Para el circuito electrónico dado, donde:
 
 - $\( R = 1 \, \text{k}\Omega \)$
