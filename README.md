@@ -10,6 +10,14 @@ Obtención de la curva característica del diodo zener
 
 ## 2. Metodología
 
+Para el circuito electrónico de la Fig. 1, se tiene los siguientes valores para cada uno de los componentes:
+- 𝑅 = 1𝑘Ω,
+- 𝑅𝐿 = 10𝑘Ω,
+- 𝑉𝑧 = 10𝑉
+- $𝑃{𝑧𝑚𝑎𝑥} = 0.5𝑊$. 
+
+Hallar analíticamente el valor de 𝑉𝑖 para el cual el diodo zener empieza a regular el voltaje de la carga. Cuál es la corriente 𝐼𝑍𝑚𝑛 para esta condición? (Incluya todos los cálculos realizados analíticamente).  
+
 ### a. Análisis del Circuito Electrónico
 
 ![image](https://github.com/user-attachments/assets/db5f87dc-2097-4593-b9c3-6340ca2a6e33)
